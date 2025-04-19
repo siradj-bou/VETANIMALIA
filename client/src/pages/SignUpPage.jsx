@@ -116,7 +116,8 @@ const SignUpPage = () => {
                                 type="tel"
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
-                                placeholder="0770 00 00 00"
+                                
+                                // placeholder="0770 00 00 00"
                                 className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                                 required
                             />
@@ -194,3 +195,4 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
+

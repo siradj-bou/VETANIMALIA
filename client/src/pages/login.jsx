@@ -24,9 +24,9 @@ const LoginPage = () => {
               <div className="max-w-md mx-auto">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Bienvenue de retour</h3>
                 
-                <button className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-lg mb-6 hover:bg-gray-50 transition flex items-center justify-center gap-2 shadow-sm">
+                {/* <button className="w-full bg-white border border-gray-300 text-gray-700 py-3 rounded-lg mb-6 hover:bg-gray-50 transition flex items-center justify-center gap-2 shadow-sm">
                   <FaGoogle className="text-red-500" /> Se connecter avec Google
-                </button>
+                </button> */}
                 
                 <div className="flex items-center my-6">
                   <div className="flex-grow border-t border-gray-300"></div>

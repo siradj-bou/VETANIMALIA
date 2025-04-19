@@ -25,7 +25,8 @@ const Navbar = () => {
   return (
     <nav 
       ref={navRef}
-      className="flex justify-between items-center p-3 sm:p-5 shadow-lg font-sans mx-4 mb-5 sm:mx-8 lg:mx-16 bg-white rounded-full mt-5 relative"
+      className="flex justify-between items-center p-3 sm:p-5 shadow-lg font-sans mx-4 mb-5 sm:mx-8 
+      lg:mx-16 bg-white rounded-full mt-5 relative"
     >
       {/* Logo */}
       <Link to="/" className="flex items-center z-10">

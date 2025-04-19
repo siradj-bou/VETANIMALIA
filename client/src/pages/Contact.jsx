@@ -1,6 +1,10 @@
 import React from 'react';
-import { FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt, FaClock, FaEnvelope, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import Dog from "../photo/imgs/Dog.png";
+import ilyes from '../photo/imgs/ilyes.jpg'
+
+
+
 
 const ContactPage = () => {
   return (
@@ -17,7 +21,9 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Information Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16"> 
+
+
           {/* Contact Card */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="p-8">
@@ -32,7 +38,7 @@ const ContactPage = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900">Adresse</h4>
                     <p className="mt-1 text-gray-600">
-                      Unité médicale 17 Ali Mendjeli<br />
+                      Cabinet vétérinaire uv 17 Ali Mendjeli<br />
                       Constantine, Algérie
                     </p>
                   </div>
@@ -46,7 +52,7 @@ const ContactPage = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900">Téléphone</h4>
                     <p className="mt-1 text-gray-600">0770807185</p>
-                    <p className="mt-1 text-gray-600">Urgences 24h/24</p>
+                    {/* <p className="mt-1 text-gray-600">Urgences 24h/24</p> */}
                   </div>
                 </div>
 
@@ -58,9 +64,7 @@ const ContactPage = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900">Horaires d'ouverture</h4>
                     <p className="mt-1 text-gray-600">
-                      Lundi - Vendredi: 8h00 - 19h00<br />
-                      Samedi: 9h00 - 17h00<br />
-                      Dimanche: Urgences seulement
+                      24H/24
                     </p>
                   </div>
                 </div>
@@ -72,7 +76,7 @@ const ContactPage = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900">Email</h4>
-                    <p className="mt-1 text-gray-600">contact@vetanimalia.dz</p>
+                    <p className="mt-1 text-gray-600">cabinetvetanimalia@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -81,19 +85,24 @@ const ContactPage = () => {
               <div className="mt-8">
                 <h4 className="text-lg font-medium text-gray-900 mb-4">Suivez-nous</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-600 hover:text-orange-400">
+                  <a href="https://www.facebook.com/profile.php?id=100091730273953&mibextid=ZbWKwL" target='_blank' className="text-gray-600 hover:text-orange-400">
                     <FaFacebook className="h-6 w-6" />
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-orange-400">
+                  <a href="https://www.instagram.com/cabinet_vetanimalia25?igsh=MWM0c3J3Zzh1bWg2dA==" target='_blank' className="text-gray-600 hover:text-orange-400">
                     <FaInstagram className="h-6 w-6" />
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-orange-400">
-                    <FaTiktok className="h-6 w-6" />
+                  <a href="https://wa.me/+213770807185"  target='_blank' className="text-gray-600 hover:text-orange-400">
+                    <FaWhatsapp className="h-6 w-6" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
+
+
+
+
+
 
           {/* Map Section */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -102,7 +111,7 @@ const ContactPage = () => {
               <div className="relative pb-3/4 h-96 rounded-lg overflow-hidden">
                 <iframe
                   title="Localisation du cabinet VETANIMALIA"
-                  src="https://maps.google.com/maps?q=ali+mendjeli+UV17+vetanimalia&output=embed"
+                  src="https://www.google.com/maps/embed/v1/place?q=VETANIMALIA(cabinet+vétérinaire),+6HP5+7XP,+El+Khroub&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                   className="absolute top-0 left-0 w-full h-full border-0"
                   allowFullScreen
                   loading="lazy"
@@ -110,12 +119,12 @@ const ContactPage = () => {
               </div>
               <div className="mt-6 flex items-center">
                 <img
-                  src={Dog}
+                  src={ilyes}
                   alt="Dr. Rabah Guitouni"
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="ml-4">
-                  <h4 className="text-lg font-medium text-gray-900">Dr. Ilyes Zitouni</h4>
+                  <h4 className="text-lg font-medium text-gray-900">Dr. Ilyes kitouni</h4>
                   <p className="text-gray-600">Vétérinaire principal</p>
                 </div>
               </div>
