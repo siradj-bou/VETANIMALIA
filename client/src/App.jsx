@@ -8,6 +8,7 @@ import SignUp from './pages/SignUpPage.jsx'
 import Contact from './pages/Contact.jsx'
 import Footer from './component/footer.jsx'
 import { Route, Routes } from 'react-router-dom'
+import './i18n/config';
 function App() {
  
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import animal from '../photo/service/ced.avif';
 import animal2 from '../photo/service/chur.jpg';
 import radio from '../photo/imgs/radio.jpg';
@@ -8,73 +9,75 @@ import garde from '../photo/imgs/garde.jpg';
 import deta from '../photo/imgs/detartrage.jpg';
 
 const OurServices = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
-      category: 'Consultation et Diagnostic',
+      category: t('Services.consultation'),
       items: [
-        'Réalisation d\'examens physiques approfondis pour détecter les problèmes de santé des animaux.',
-        'Analyse clinique et évaluation des symptômes pour un diagnostic précis.',
-        'Conseils personnalisés pour les traitements et le suivi médical adaptés.',
+        t('Services.consultation_item1'),
+        t('Services.consultation_item2'),
+        t('Services.consultation_item3'),
       ],
       image: animal,
       hasButton: false
     },
     {
-      category: 'Chirurgie et Soins',
+      category: t('Services.surgery'),
       items: [
-        'Interventions chirurgicales, allant des procédures mineures aux opérations complexes.',
-        'Soins postopératoires pour une récupération rapide et efficace.',
-        'Surveillance et gestion des douleurs pour garantir le bien-être des animaux.',
+        t('Services.surgery_item1'),
+        t('Services.surgery_item2'),
+        t('Services.surgery_item3'),
       ],
       image: animal2,
       hasButton: false
     },
     {
-      category: 'Radiographie et Échographie',
+      category: t('Services.radiography'),
       items: [
-        ' Radiographies pour détecter les blessures internes ou les anomalies.',
-        'Échographies utilisées pour examiner les organes et tissus internes.',
-        'Méthodes non invasives offrant des résultats fiables.',
+        t('Services.radiography_item1'),
+        t('Services.radiography_item2'),
+        t('Services.radiography_item3'),
       ],
       image: radio,
       hasButton: false
     },
     {
-      category: 'Alimentation et Accessoires',
+      category: t('Services.nutrition'),
       items: [
-        ' Fourniture d\'aliments adaptés aux besoins nutritionnels spécifiques.',
-        'Accessoires de qualité tels que jouets, colliers et laisses.',
-        'Conseils personnalisés pour le bien-être quotidien des animaux.',
+        t('Services.nutrition_item1'),
+        t('Services.nutrition_item2'),
+        t('Services.nutrition_item3'),
       ],
       image: alimentation,
       hasButton: false
     },
     {
-      category: 'Vaccination et Puce Électronique',
+      category: t('Services.vaccination'),
       items: [
-        'Vaccins pour prévenir les maladies infectieuses et évitables.',
-        'Implantation de puces électroniques pour identifier les animaux en toute sécurité.',
-        'Suivi et conseils pour maintenir la santé préventive.',
+        t('Services.vaccination_item1'),
+        t('Services.vaccination_item2'),
+        t('Services.vaccination_item3'),
       ],
       image: vaccination,
       hasButton: false
     },
     {
-      category: 'Hospitalisation et Gardiennage',
+      category: t('Services.hospitalization'),
       items: [
-        'Services d\'hospitalisation avec soins intensifs et surveillance vétérinaire.',
-        'Hébergement confortable pour les animaux en convalescence.',
-        'Gardiennage personnalisé en l\'absence des propriétaires.',
+        t('Services.hospitalization_item1'),
+        t('Services.hospitalization_item2'),
+        t('Services.hospitalization_item3'),
       ],
       image: garde,
       hasButton: false
     },
     {
-      category: 'Toilettage et Détartrage',
+      category: t('Services.grooming'),
       items: [
-        ' Toilettage complet (bain, coupe de poils, nettoyage des oreilles).',
-        'Nettoyage dentaire professionnel pour éliminer le tartre et prévenir les maladies buccales.',
-        ' Services pour préserver la santé et l\'apparence des animaux.',
+        t('Services.grooming_item1'),
+        t('Services.grooming_item2'),
+        t('Services.grooming_item3'),
       ],
       image: deta,
       hasButton: false
@@ -86,10 +89,10 @@ const OurServices = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-            Nos Services
+            {t('Services.title')}
           </h2>
           <p className="mt-5 max-w-xl mx-auto text-xl text-gray-500">
-            Des soins complets et attentionnés pour vos compagnons à quatre pattes
+            {t('Services.subtitle')}
           </p>
         </div>
 
@@ -127,18 +130,6 @@ const OurServices = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-4">
-          {/* <button className="inline-flex items-center px-6 py-3 border border-transparent
-           text-base font-medium rounded-md shadow-sm text-white bg-orange-400 hover:bg-orange-500
-            transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2
-             focus:ring-orange-400">
-            Découvrir tous nos services
-            <svg xmlns="http://www.w3.org/2000/svg" className="ml-3 -mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </button> */}
         </div>
       </div>
     </div>

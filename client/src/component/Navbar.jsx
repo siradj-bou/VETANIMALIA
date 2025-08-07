@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 import logo from "../photo/imgs/logo.png";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
   const buttonRef = useRef(null);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target) && 
@@ -36,66 +38,78 @@ const Navbar = () => {
       {/* Desktop Navigation Links */}
       <ul className="hidden sm:flex space-x-6 lg:space-x-10">
         <li>
-          <Link to="/About" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">À propos</Link>
+          <Link to="/About" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">
+            {t('navbar.about')}
+          </Link>
         </li>
         <li>
-          <Link to="/services" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">Services</Link>
+          <Link to="/services" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">
+            {t('navbar.services')}
+          </Link>
         </li>
         <li>
-          <Link to="/products" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">Produits</Link>
+          <Link to="/products" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">
+            {t('navbar.products')}
+          </Link>
         </li>
         <li>
-          <Link to="/contact" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">Contact</Link>
+          <Link to="/contact" className="hover:text-orange-600 transition-colors duration-200 py-2 px-1 text-sm lg:text-base">
+            {t('navbar.contact')}
+          </Link>
         </li>
       </ul>
 
       {/* Desktop Action Buttons */}
-      <div className="hidden sm:flex space-x-2 lg:space-x-3">
+      <div className="hidden sm:flex items-center space-x-4">
+        <LanguageSwitcher />
         <Link 
           to="/login" 
           className="px-3 lg:px-5 py-1 lg:py-2 bg-[#FFBD89] text-white hover:bg-orange-400 rounded-full transition duration-300 text-sm lg:text-base"
         >
-          Se connecter
+          {t('navbar.login')}
         </Link>
         <Link 
           to="/SignUp" 
           className="px-3 lg:px-5 py-1 lg:py-2 bg-[#FFBD89] text-white hover:bg-orange-400 rounded-full transition duration-300 text-sm lg:text-base"
         >
-          Rendez Vous
+          {t('navbar.appointment')}
         </Link>
       </div>
 
       {/* Mobile Menu Button */}
-      <button 
-        ref={buttonRef}
-        className="sm:hidden focus:outline-none z-10 p-2"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle menu"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+      <div className="sm:hidden flex items-center space-x-4">
+        <LanguageSwitcher />
+        <button 
+          ref={buttonRef}
+          className="focus:outline-none z-10 p-2"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          {isOpen ? (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          ) : (
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          )}
-        </svg>
-      </button>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
 
       {/* Mobile Dropdown Menu */}
       <div 
@@ -109,7 +123,7 @@ const Navbar = () => {
               className="block py-3 px-4 hover:bg-orange-50 rounded-lg transition-colors duration-200 text-sm"
               onClick={() => setIsOpen(false)}
             >
-              À propos
+              {t('navbar.about')}
             </Link>
           </li>
           <li>
@@ -118,7 +132,7 @@ const Navbar = () => {
               className="block py-3 px-4 hover:bg-orange-50 rounded-lg transition-colors duration-200 text-sm"
               onClick={() => setIsOpen(false)}
             >
-              Services
+              {t('navbar.services')}
             </Link>
           </li>
           <li>
@@ -127,7 +141,7 @@ const Navbar = () => {
               className="block py-3 px-4 hover:bg-orange-50 rounded-lg transition-colors duration-200 text-sm"
               onClick={() => setIsOpen(false)}
             >
-              Produits
+              {t('navbar.products')}
             </Link>
           </li>
           <li>
@@ -136,7 +150,7 @@ const Navbar = () => {
               className="block py-3 px-4 hover:bg-orange-50 rounded-lg transition-colors duration-200 text-sm"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              {t('navbar.contact')}
             </Link>
           </li>
         </ul>
@@ -147,14 +161,14 @@ const Navbar = () => {
             className="flex-1 text-center px-2 py-2 bg-[#FFBD89] text-white hover:bg-orange-400 rounded-full transition duration-300 text-xs sm:text-sm"
             onClick={() => setIsOpen(false)}
           >
-            Se connecter
+            {t('navbar.login')}
           </Link>
           <Link 
             to="/SignUp" 
             className="flex-1 text-center px-2 py-2 bg-[#FFBD89] text-white hover:bg-orange-400 rounded-full transition duration-300 text-xs sm:text-sm"
             onClick={() => setIsOpen(false)}
           >
-            Rendez Vous
+            {t('navbar.appointment')}
           </Link>
         </div>
       </div>
