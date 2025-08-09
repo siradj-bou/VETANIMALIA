@@ -153,7 +153,8 @@
     "full_name": "Nom complet",
     "subject": "Sujet",
     "message": "Message",
-    "send": "Envoyer le message"
+    "send": "Envoyer le message",
+    "doctor_title":"Vétérinaire principal"
   },
   "login": {
     "title": "Connexion",
@@ -164,36 +165,56 @@
     "remember": "Se souvenir de moi",
     "login": "Se connecter",
     "no_account": "Pas encore de compte ?",
-    "signup": "S'inscrire"
+    "signup": "S'inscrire",
+    "or": "ou"
+    
   },
   "Services": {
     "title": "Nos Services",
     "subtitle": "Des soins complets et attentionnés pour vos compagnons à quatre pattes",
-    "radiography": "Radiographie",
-    "surgery": "Chirurgie",
-    "vaccination": "Vaccination",
-    "consultation": "Consultation",
-    "grooming": "Toilettage",
-    "nutrition": "Nutrition",
+    "radiography": "Radiographie et Échographie",
+    "surgery": "Chirurgie et Soins",
+    "vaccination": "Vaccination et Puce Électronique",
+    "consultation": "Consultation et Diagnostic",
+    "grooming": "Toilettage et Détartrage",
+    "nutrition": "Alimentation et Accessoires",
     "emergency": "Urgences",
-    "hospitalization": "Hospitalisation",
-    "radiography_item1": "Radiographie numérique",
-    "radiography_item2": "Interprétation des résultats",
-    "surgery_item1": "Chirurgie orthopédique",
-    "surgery_item2": "Chirurgie générale",
-    "vaccination_item1": "Vaccins canins et félins",
-    "vaccination_item2": "Vaccins exotiques",
-    "consultation_item1": "Consultation générale",
-    "consultation_item2": "Consultation spécialisée",
-    "grooming_item1": "Toilettage complet",
-    "grooming_item2": "Soins esthétiques"
+    "hospitalization": "Hospitalisation et Gardiennage",
+    "radiography_item1": "Radiographies pour détecter les blessures internes ou les anomalies.",
+    "radiography_item2": "Échographies utilisées pour examiner les organes et tissus internes.",
+    "radiography_item3": "Méthodes non invasives offrant des résultats fiables.",
+    "surgery_item1": "Procédures chirurgicales mineures et complexes réalisées par des experts.",
+    "surgery_item2": "Soins postopératoires pour garantir une récupération rapide et efficace.",
+    "surgery_item3": "Gestion des douleurs et surveillance constante.",
+    "vaccination_item1": "Vaccins pour prévenir les maladies infectieuses et évitables.",
+    "vaccination_item2": "Implantation de puces électroniques pour identifier les animaux en toute sécurité.",
+    "vaccination_item3": "Suivi et conseils pour maintenir la santé préventive.",
+    "consultation_item1": "Examen physique complet pour détecter les problèmes de santé des animaux.",
+    "consultation_item2": "Analyse clinique et diagnostic précis.",
+    "consultation_item3": "Conseils médicaux adaptés pour un suivi personnalisé.",
+    "grooming_item1": "Toilettage complet (bain, coupe de poils, nettoyage des oreilles).",
+    "grooming_item2": "Nettoyage dentaire professionnel pour éliminer le tartre et prévenir les maladies buccales.",
+    "grooming_item3": "Services pour préserver la santé et l’apparence des animaux.",
+    "nutrition_item1": "Fourniture d’aliments adaptés aux besoins nutritionnels spécifiques.",
+    "nutrition_item2": "Accessoires de qualité tels que jouets, colliers et laisses.",
+    "nutrition_item3": "Conseils personnalisés pour le bien-être quotidien des animaux.",
+    "hospitalization_item1": "Services d’hospitalisation avec soins intensifs et surveillance vétérinaire.",
+    "hospitalization_item2": "Hébergement confortable pour les animaux en convalescence.",
+    "hospitalization_item3": "Gardiennage personnalisé en l’absence des propriétaires.",
+    "catHotel": "Hôtel pour chats",
+    "catHotel_item1": "Suites privées avec literie confortable",
+    "catHotel_item2": "Temps de jeu quotidien et interaction sociale",
+    "catHotel_item3": "Surveillance et soins 24h/24 et 7j/7",
+    "catHotel_alt": "Chambre luxueuse d'hôtel pour chats"
+
+
     
   },
   "appointment": {
     "title": "Prendre un Rendez-vous",
     "subtitle": "Planifiez une visite pour votre compagnon bien-aimé chez VETANIMALIA",
     "owner": "Nom du Propriétaire",
-    "pet": "Nom de l'Animal",
+    "pet": "type d'animal",
     "date": "Date du Rendez-vous",
     "breed": "Race de l'Animal",
     "breed_options": {
@@ -202,7 +223,11 @@
       "bird": "Oiseau",
       "rodent": "Rongeur",
       "other": "Autre"
+      
+
     },
+      "success_message": "Rendez-vous confirmé avec succès !",
+      "sending": "Envoi de votre demande de rendez-vous...",
     "privacy_link": "Politique de confidentialité",
     "owner_placeholder": "Entrez le nom du propriétaire",
         "pet_placeholder": "Entrez le nom de l'animal",
@@ -210,6 +235,7 @@
         "breed_placeholder": "Sélection",
     
 
+    "symptoms": "Symptômes / Raison de la Visite",    
     "phone": "Téléphone",
     "symptoms_placeholder": "Symptômes / Raison de la visite",
     "privacy": "J'accepte la politique de confidentialité",

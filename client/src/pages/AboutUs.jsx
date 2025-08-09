@@ -25,9 +25,7 @@ const AboutUs = () => {
           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
             {t('About.our_story_desc')}
           </p>
-          <button className="px-6 py-2 bg-black text-white rounded-full hover:bg-orange-900 transition duration-300">
-            {t('About.read_more')}
-          </button>
+        
         </div>
       </section>
 
